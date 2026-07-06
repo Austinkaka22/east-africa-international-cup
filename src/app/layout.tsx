@@ -16,6 +16,14 @@ export const metadata: Metadata = {
     description:
       "Celebrating youth football, academy talent, and regional connection across East Africa.",
     images: ["/assets/profile-cover.png"]
+  },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon-32.png", type: "image/png", sizes: "32x32" },
+      { url: "/icon-192.png", type: "image/png", sizes: "192x192" }
+    ],
+    apple: [{ url: "/apple-icon.png", type: "image/png", sizes: "180x180" }]
   }
 };
 

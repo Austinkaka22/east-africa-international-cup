@@ -33,7 +33,7 @@ export function Hero() {
       </div>
       <div className={styles.visual}>
         <Image
-          src="/assets/cup-emblem.png"
+          src="/assets/EACup.png"
           alt="East Africa International Cup emblem"
           width={720}
           height={720}

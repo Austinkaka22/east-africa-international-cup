@@ -13,7 +13,7 @@ export function Header() {
   return (
     <header className={styles.header}>
       <Link className={styles.brand} href="/" aria-label={`${brand.name} home`}>
-        <Image src="/assets/cup-emblem.png" alt="" width={54} height={54} priority />
+        <Image src="/assets/EACup.png" alt="" width={54} height={54} priority />
         <span>
           <strong>{brand.name}</strong>
           <small>{brand.tagline}</small>
