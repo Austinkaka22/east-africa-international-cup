@@ -1,0 +1,109 @@
+.hero {
+  position: relative;
+  display: grid;
+  min-height: calc(100vh - 74px);
+  grid-template-columns: minmax(0, 1.12fr) minmax(280px, 0.88fr);
+  gap: clamp(20px, 5vw, 80px);
+  align-items: center;
+  overflow: hidden;
+  padding: clamp(42px, 7vw, 82px) max(16px, calc((100vw - var(--max)) / 2)) 28px;
+  background:
+    linear-gradient(90deg, rgba(246, 241, 232, 0.96) 0 48%, rgba(246, 241, 232, 0.42)),
+    url("/assets/profile-cover.png") center bottom / cover no-repeat;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 70% 10%, rgba(213, 167, 47, 0.26), transparent 22rem),
+    linear-gradient(180deg, transparent, rgba(246, 241, 232, 0.94));
+  pointer-events: none;
+}
+
+.content,
+.visual,
+.stats {
+  position: relative;
+}
+
+.content {
+  max-width: 740px;
+}
+
+.visual {
+  display: grid;
+  place-items: center;
+}
+
+.visual img {
+  width: min(100%, 440px);
+  height: auto;
+  filter: drop-shadow(0 28px 36px rgba(0, 0, 0, 0.28));
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+  color: #30261d;
+  font-weight: 800;
+}
+
+.meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 250, 240, 0.76);
+  padding: 10px 13px;
+}
+
+.stats {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(255, 250, 240, 0.72);
+  backdrop-filter: blur(8px);
+}
+
+.stats div {
+  padding: 18px;
+  border-right: 1px solid var(--line);
+}
+
+.stats div:last-child {
+  border-right: 0;
+}
+
+.stats strong {
+  display: block;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  line-height: 0.9;
+}
+
+.stats span {
+  color: var(--muted);
+  font-weight: 800;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    min-height: auto;
+    grid-template-columns: 1fr;
+  }
+
+  .stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .stats div:nth-child(2) {
+    border-right: 0;
+  }
+}

@@ -1,0 +1,35 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--line);
+  padding-block: clamp(64px, 10vw, 118px);
+  background:
+    linear-gradient(90deg, rgba(246, 241, 232, 0.96), rgba(246, 241, 232, 0.74)),
+    url("/assets/savanna-strip.png") center bottom / cover no-repeat;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(135deg, transparent 0 44%, rgba(23, 18, 11, 0.08) 44% 47%, transparent 47% 100%);
+  background-size: 70px 70px;
+  opacity: 0.5;
+  pointer-events: none;
+  mask-image: linear-gradient(90deg, #000, transparent 65%);
+}
+
+.hero :global(.container) {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  max-width: 12ch;
+  font-size: clamp(3.2rem, 8vw, 7rem);
+}
+
+.hero p:last-child {
+  max-width: 760px;
+}
