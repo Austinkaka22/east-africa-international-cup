@@ -21,7 +21,7 @@ export default function MatchDetailsPage() {
             {fixture.home} vs {fixture.away}
           </h2>
           <p>
-            {fixture.discipline} · {fixture.venue} · {fixture.time}
+            {fixture.ageGroup} · {fixture.pitch} · {fixture.time}
           </p>
           <div className="grid three" style={{ marginTop: 24 }}>
             <div>

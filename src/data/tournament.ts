@@ -18,19 +18,29 @@ export const brand = {
   name: "East Africa International Cup",
   shortName: "EAIC",
   tagline: "Karibu East Africa",
-  email: "info@eastafricainternationalcup.com",
-  phone: "+254 700 000 000",
-  location: "East Africa"
+  email: "info@eastafricacup.co.ke",
+  phone: "+254 794 832 260",
+  location: "Lenana School, Nairobi, Kenya",
+  officialDates: "12th, 13th, 14th & 15th April 2027",
+  venue: "Lenana School, Nairobi, Kenya",
+  registrationFee: "KES 14,999",
+  registrationDeadline: "28th February 2027"
 };
 
-export const disciplines = [
-  { name: "Under 7", key: "U7", players: 10 },
-  { name: "Under 9", key: "U9", players: 12 },
-  { name: "Under 11", key: "U11", players: 14 },
-  { name: "Under 13", key: "U13", players: 16 },
-  { name: "Under 15", key: "U15", players: 20 },
-  { name: "Under 17", key: "U17", players: 20 }
+export const ageGroups = [
+  { key: "U7", label: "U7", squadLimit: 10 },
+  { key: "U9", label: "U9", squadLimit: 12 },
+  { key: "U11", label: "U11", squadLimit: 14 },
+  { key: "U13", label: "U13", squadLimit: 16 },
+  { key: "U15", label: "U15", squadLimit: 20 },
+  { key: "U17", label: "U17", squadLimit: 20 },
+  { key: "GIRLS_U13", label: "Girls U13", squadLimit: 16 },
+  { key: "GIRLS_U15", label: "Girls U15", squadLimit: 20 },
+  { key: "GIRLS_U17", label: "Girls U17", squadLimit: 20 },
+  { key: "SENIORS", label: "Seniors", squadLimit: 20 }
 ];
+
+export const teamCountOptions = ["None", "1 team", "2 teams", "3 teams", "4 teams"];
 
 export const mainNav = [
   { href: "/", label: "Home" },
@@ -56,9 +66,9 @@ export const editionLinks = [
 ];
 
 export const impactStats = [
-  { value: "6", label: "Age disciplines" },
+  { value: "10", label: "Age groups" },
   { value: "10+", label: "East African flags represented" },
-  { value: "1st", label: "Edition platform" },
+  { value: "2027", label: "First edition" },
   { value: "20", label: "Max squad size" }
 ];
 
@@ -80,25 +90,25 @@ export const registeredTeams = [
   {
     name: "Rangers Academy",
     country: "Kenya",
-    discipline: "Under 13",
+    ageGroup: "U13",
     status: "Approved"
   },
   {
     name: "Kampala Junior Stars",
     country: "Uganda",
-    discipline: "Under 15",
+    ageGroup: "U15",
     status: "Pending documents"
   },
   {
     name: "Arusha Future FC",
     country: "Tanzania",
-    discipline: "Under 11",
+    ageGroup: "U11",
     status: "Approved"
   },
   {
     name: "Kigali Youth Academy",
     country: "Rwanda",
-    discipline: "Under 17",
+    ageGroup: "U17",
     status: "Review"
   }
 ];
@@ -106,20 +116,20 @@ export const registeredTeams = [
 export const fixtures = [
   {
     id: "eaic-u13-001",
-    date: "To be confirmed",
+    date: "12 Apr 2027",
     time: "09:00",
-    discipline: "Under 13",
-    venue: "Main Pitch",
+    ageGroup: "U13",
+    pitch: "Main Pitch",
     home: "Rangers Academy",
     away: "Arusha Future FC",
     status: "Draft"
   },
   {
     id: "eaic-u15-001",
-    date: "To be confirmed",
+    date: "12 Apr 2027",
     time: "10:30",
-    discipline: "Under 15",
-    venue: "Pitch B",
+    ageGroup: "U15",
+    pitch: "Pitch B",
     home: "Kampala Junior Stars",
     away: "Invited Academy",
     status: "Draft"
@@ -129,7 +139,7 @@ export const fixtures = [
 export const results = [
   {
     match: "Opening showcase",
-    discipline: "Under 17",
+    ageGroup: "U17",
     score: "Awaiting kickoff",
     status: "No result"
   }
@@ -138,7 +148,7 @@ export const results = [
 export const standings = [
   {
     team: "Rangers Academy",
-    discipline: "Under 13",
+    ageGroup: "U13",
     played: 0,
     wins: 0,
     draws: 0,
@@ -148,13 +158,31 @@ export const standings = [
   },
   {
     team: "Arusha Future FC",
-    discipline: "Under 13",
+    ageGroup: "U13",
     played: 0,
     wins: 0,
     draws: 0,
     losses: 0,
     gd: 0,
     points: 0
+  }
+];
+
+export const records = [
+  {
+    ageGroup: "U13",
+    title: "U13 Player of the Tournament",
+    status: "Winner to be announced after the 1st Edition."
+  },
+  {
+    ageGroup: "U15",
+    title: "U15 Player of the Tournament",
+    status: "Winner to be announced after the 1st Edition."
+  },
+  {
+    ageGroup: "U17",
+    title: "U17 Player of the Tournament",
+    status: "Winner to be announced after the 1st Edition."
   }
 ];
 
@@ -188,5 +216,28 @@ export const partnerReasons = [
     title: "Brand engagement",
     icon: Mail,
     copy: "Connect through digital content, event activations, social storytelling, and sponsor-led experiences."
+  }
+];
+
+export const officialPartners = [
+  {
+    name: "Football Kenya Federation",
+    role: "Federation Partner",
+    logo: "/assets/partners/football-kenya-federation.png"
+  },
+  {
+    name: "Mayland Integrated School",
+    role: "Education Partner",
+    logo: "/assets/partners/mayland-integrated-school.png"
+  },
+  {
+    name: "Rangers Football Academy",
+    role: "Academy Partner",
+    logo: "/assets/partners/rangers-football-academy.png"
+  },
+  {
+    name: "Rumhas Construction Co Ltd",
+    role: "Sponsor Partner",
+    logo: "/assets/partners/rumhas-construction.png"
   }
 ];

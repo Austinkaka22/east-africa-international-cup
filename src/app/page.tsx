@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Hero } from "@/components/hero";
 import {
-  disciplines,
+  ageGroups,
   editionLinks,
   partnerReasons,
   registeredTeams,
@@ -42,10 +42,10 @@ export default function HomePage() {
       <section className="section band">
         <div className="container grid two">
           <div className="card pad">
-            <p className="eyebrow">Disciplines</p>
-            <h2>From Under 7 to Under 17.</h2>
+            <p className="eyebrow">Age groups</p>
+            <h2>From U7 to Seniors.</h2>
             <p>
-              Each discipline has its own squad limit so registration stays structured,
+              Each age group has its own squad limit so registration stays structured,
               fair, and ready for the later tournament portal.
             </p>
           </div>
@@ -53,15 +53,15 @@ export default function HomePage() {
             <table>
               <thead>
                 <tr>
-                  <th>Discipline</th>
+                  <th>Age group</th>
                   <th>Squad limit</th>
                 </tr>
               </thead>
               <tbody>
-                {disciplines.map((discipline) => (
-                  <tr key={discipline.key}>
-                    <td>{discipline.name}</td>
-                    <td>{discipline.players} players</td>
+                {ageGroups.map((ageGroup) => (
+                  <tr key={ageGroup.key}>
+                    <td>{ageGroup.label}</td>
+                    <td>{ageGroup.squadLimit} players</td>
                   </tr>
                 ))}
               </tbody>
@@ -126,7 +126,7 @@ export default function HomePage() {
               <div className="card pad" key={team.name}>
                 <h3>{team.name}</h3>
                 <p>
-                  {team.country} · {team.discipline}
+                  {team.country} · {team.ageGroup}
                 </p>
                 <strong>{team.status}</strong>
               </div>

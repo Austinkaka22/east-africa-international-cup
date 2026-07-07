@@ -15,6 +15,27 @@ const requiredEnv = [
   "SMTP_FROM"
 ];
 
+const fieldLabels: Record<string, string> = {
+  formType: "Form type",
+  academyName: "Academy or club name",
+  country: "Country",
+  contactName: "Contact person",
+  email: "Email",
+  phone: "Phone",
+  u7Teams: "U7 teams",
+  u9Teams: "U9 teams",
+  u11Teams: "U11 teams",
+  u13Teams: "U13 teams",
+  u15Teams: "U15 teams",
+  u17Teams: "U17 teams",
+  girlsU13Teams: "Girls U13 teams",
+  girlsU15Teams: "Girls U15 teams",
+  girlsU17Teams: "Girls U17 teams",
+  seniorsTeams: "Seniors teams",
+  commitment: "Commitment response",
+  notes: "Notes"
+};
+
 export function isEmailConfigured() {
   return requiredEnv.every((key) => Boolean(process.env[key]));
 }
@@ -24,7 +45,7 @@ function submissionToHtml(submission: FormSubmission) {
     .filter(([key]) => key !== "website")
     .map(
       ([key, value]) =>
-        `<tr><th style="text-align:left;padding:8px;border-bottom:1px solid #ddd;">${key}</th><td style="padding:8px;border-bottom:1px solid #ddd;">${String(value ?? "")}</td></tr>`
+        `<tr><th style="text-align:left;padding:8px;border-bottom:1px solid #ddd;">${fieldLabels[key] ?? key}</th><td style="padding:8px;border-bottom:1px solid #ddd;">${String(value ?? "")}</td></tr>`
     )
     .join("");
 

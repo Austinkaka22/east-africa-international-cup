@@ -1,5 +1,5 @@
 import { PageHero } from "@/components/page-hero";
-import { disciplines } from "@/data/tournament";
+import { ageGroups } from "@/data/tournament";
 
 export const metadata = {
   title: "Registration Guidelines"
@@ -7,8 +7,8 @@ export const metadata = {
 
 export default function GuidelinesPage() {
   const steps = [
-    "Choose the correct discipline and confirm squad size.",
-    "Submit academy, coach, and contact details through the registration form.",
+    "Choose the correct age groups and confirm squad size.",
+    "Submit academy, contact person, and team-count details through the registration form.",
     "Wait for organizer review and follow-up instructions.",
     "Provide age eligibility documents and any requested payment confirmation.",
     "Approved teams appear publicly on the registered teams page."
@@ -36,15 +36,15 @@ export default function GuidelinesPage() {
             <table>
               <thead>
                 <tr>
-                  <th>Discipline</th>
+                  <th>Age group</th>
                   <th>Max players</th>
                 </tr>
               </thead>
               <tbody>
-                {disciplines.map((discipline) => (
-                  <tr key={discipline.key}>
-                    <td>{discipline.name}</td>
-                    <td>{discipline.players}</td>
+                {ageGroups.map((ageGroup) => (
+                  <tr key={ageGroup.key}>
+                    <td>{ageGroup.label}</td>
+                    <td>{ageGroup.squadLimit}</td>
                   </tr>
                 ))}
               </tbody>

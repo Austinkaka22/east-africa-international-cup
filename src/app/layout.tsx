@@ -4,17 +4,17 @@ import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://eastafricainternationalcup.com"),
+  metadataBase: new URL("https://eastafricacup.co.ke"),
   title: {
     default: "East Africa International Cup",
     template: "%s | East Africa International Cup"
   },
   description:
-    "A modern youth football tournament platform for academies across East Africa.",
+    "A modern youth football tournament platform for academies across East Africa in April 2027.",
   openGraph: {
     title: "East Africa International Cup",
     description:
-      "Celebrating youth football, academy talent, and regional connection across East Africa.",
+      "Celebrating youth football, academy talent, and regional connection across East Africa in April 2027.",
     images: ["/assets/profile-cover.png"]
   },
   icons: {

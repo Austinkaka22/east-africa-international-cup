@@ -215,6 +215,44 @@ p {
   position: relative;
 }
 
+.partner-logo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 26px;
+}
+
+.partner-logo-card {
+  display: grid;
+  align-content: start;
+  gap: 12px;
+}
+
+.partner-logo-card h3 {
+  font-size: clamp(1.35rem, 2.2vw, 1.9rem);
+}
+
+.partner-logo-card p {
+  margin: 0;
+  color: var(--muted);
+  font-weight: 800;
+}
+
+.partner-logo-mark {
+  display: grid;
+  min-height: 150px;
+  place-items: center;
+  border: 1px solid rgba(23, 18, 11, 0.08);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.5);
+  padding: 18px;
+}
+
+.partner-logo-mark img {
+  max-height: 132px;
+  object-fit: contain;
+}
+
 .band {
   position: relative;
   overflow: hidden;
@@ -226,6 +264,33 @@ p {
 
 .table-wrap {
   overflow-x: auto;
+}
+
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 16px;
+}
+
+.filter-bar label {
+  font-size: 0.86rem;
+  font-weight: 800;
+}
+
+.filter-bar select {
+  min-width: 220px;
+  border: 1px solid rgba(23, 18, 11, 0.24);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.78);
+  padding: 10px 12px;
+  color: var(--ink);
+}
+
+.empty-state {
+  margin-top: 18px;
 }
 
 table {
@@ -290,6 +355,30 @@ th {
   gap: 14px;
 }
 
+.form-section {
+  display: grid;
+  gap: 14px;
+  border-top: 1px solid var(--line);
+  padding-top: 20px;
+}
+
+.form-section h3 {
+  font-size: clamp(1.45rem, 2.2vw, 2rem);
+}
+
+.form-section p {
+  margin-block: 0;
+}
+
+.commitment-copy {
+  display: grid;
+  gap: 10px;
+  border: 1px solid rgba(19, 120, 51, 0.22);
+  border-radius: var(--radius);
+  background: rgba(19, 120, 51, 0.08);
+  padding: 14px;
+}
+
 .status {
   border-radius: 8px;
   padding: 12px 14px;
@@ -315,6 +404,7 @@ th {
 @media (max-width: 840px) {
   .grid.three,
   .grid.two,
+  .partner-logo-grid,
   .form-grid {
     grid-template-columns: 1fr;
   }

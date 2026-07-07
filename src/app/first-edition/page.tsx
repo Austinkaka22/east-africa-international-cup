@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { PageHero } from "@/components/page-hero";
-import { disciplines, editionLinks } from "@/data/tournament";
+import { ageGroups, editionLinks } from "@/data/tournament";
 
 export const metadata = {
   title: "1st Edition"
@@ -33,16 +33,16 @@ export default function FirstEditionPage() {
           <table>
             <thead>
               <tr>
-                <th>Discipline</th>
+                <th>Age group</th>
                 <th>Maximum players</th>
                 <th>Guidance</th>
               </tr>
             </thead>
             <tbody>
-              {disciplines.map((discipline) => (
-                <tr key={discipline.key}>
-                  <td>{discipline.name}</td>
-                  <td>{discipline.players}</td>
+              {ageGroups.map((ageGroup) => (
+                <tr key={ageGroup.key}>
+                  <td>{ageGroup.label}</td>
+                  <td>{ageGroup.squadLimit}</td>
                   <td>Registration subject to organizer review and age eligibility checks.</td>
                 </tr>
               ))}

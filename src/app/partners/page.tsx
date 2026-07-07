@@ -1,5 +1,6 @@
+import Image from "next/image";
 import { PageHero } from "@/components/page-hero";
-import { partnerReasons } from "@/data/tournament";
+import { officialPartners, partnerReasons } from "@/data/tournament";
 
 export const metadata = {
   title: "Partners"
@@ -30,16 +31,22 @@ export default function PartnersPage() {
       <section className="section-tight band">
         <div className="container">
           <p className="eyebrow">Partner logos</p>
-          <h2>Official partners will appear here.</h2>
-          <div className="grid three" style={{ marginTop: 26 }}>
-            {["Football Development Partner", "Community Partner", "Media Partner"].map(
-              (partner) => (
-                <div className="card pad" key={partner}>
-                  <h3>{partner}</h3>
-                  <p>Logo and profile pending organizer approval.</p>
+          <h2>Official tournament partners.</h2>
+          <div className="partner-logo-grid">
+            {officialPartners.map((partner) => (
+              <div className="card pad partner-logo-card" key={partner.name}>
+                <div className="partner-logo-mark">
+                  <Image
+                    src={partner.logo}
+                    alt={`${partner.name} logo`}
+                    width={360}
+                    height={220}
+                  />
                 </div>
-              )
-            )}
+                <h3>{partner.name}</h3>
+                <p>{partner.role}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

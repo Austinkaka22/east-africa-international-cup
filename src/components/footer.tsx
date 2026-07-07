@@ -39,11 +39,12 @@ export function Footer() {
             <h3>Contact</h3>
             <p>{brand.phone}</p>
             <p>{brand.email}</p>
-            <p>{brand.location}</p>
+            <p>{brand.officialDates}</p>
+            <p>{brand.venue}</p>
           </div>
         </div>
         <div className={styles.bottom}>
-          <span>© 2026 {brand.name}. All rights reserved.</span>
+          <span>© 2027 {brand.name}. All rights reserved.</span>
           <span>Built for the 1st Edition MVP.</span>
         </div>
       </div>

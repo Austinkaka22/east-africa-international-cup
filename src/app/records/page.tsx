@@ -1,4 +1,6 @@
+import { RecordsView } from "@/components/age-group-views";
 import { PageHero } from "@/components/page-hero";
+import { ageGroups, records } from "@/data/tournament";
 
 export const metadata = {
   title: "Player Records"
@@ -10,16 +12,11 @@ export default function RecordsPage() {
       <PageHero
         eyebrow="Records"
         title="Player of the tournament records."
-        copy="A public archive for award winners by edition, discipline, academy, and player profile."
+        copy="A public archive for award winners by edition, age group, academy, and player profile."
       />
       <section className="section">
-        <div className="container grid three">
-          {["Under 13", "Under 15", "Under 17"].map((discipline) => (
-            <div className="card pad" key={discipline}>
-              <h3>{discipline}</h3>
-              <p>Winner to be announced after the 1st Edition.</p>
-            </div>
-          ))}
+        <div className="container">
+          <RecordsView records={records} ageGroups={ageGroups} />
         </div>
       </section>
     </>

@@ -20,11 +20,8 @@ export default function ContactPage() {
             <h2>Contact details</h2>
             <p>{brand.phone}</p>
             <p>{brand.email}</p>
-            <p>{brand.location}</p>
-            <p>
-              Replace these placeholder details with confirmed organizer contacts before
-              launch.
-            </p>
+            <p>{brand.officialDates}</p>
+            <p>{brand.venue}</p>
           </div>
           <FormCard
             title="Send a message"

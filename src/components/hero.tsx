@@ -24,10 +24,10 @@ export function Hero() {
         </div>
         <div className={styles.meta}>
           <span>
-            <CalendarDays size={18} /> Dates to be confirmed
+            <CalendarDays size={18} /> {brand.officialDates}
           </span>
           <span>
-            <MapPinned size={18} /> East Africa
+            <MapPinned size={18} /> {brand.venue}
           </span>
         </div>
       </div>
