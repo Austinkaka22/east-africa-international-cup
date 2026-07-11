@@ -4,36 +4,82 @@
     linear-gradient(180deg, rgba(23, 18, 11, 0.92), rgba(6, 61, 34, 0.94)),
     var(--black);
   color: var(--paper);
-  padding-block: 56px 26px;
+  padding-block: 58px 24px;
 }
 
-.grid {
+.header {
   display: grid;
-  grid-template-columns: 1.6fr 0.8fr 1fr 1fr;
-  gap: 28px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 24px;
+  align-items: end;
+}
+
+.intro {
+  min-width: 0;
 }
 
 .footer h2,
-.footer h3 {
+.footer strong {
   color: var(--paper);
 }
 
 .footer h2 {
-  max-width: 10ch;
-}
-
-.footer h3 {
-  margin-bottom: 12px;
-  font-size: 1.6rem;
+  max-width: 11ch;
+  font-size: clamp(3.2rem, 7vw, 5.6rem);
+  line-height: 0.98;
 }
 
 .footer p {
+  max-width: 680px;
   color: rgba(255, 250, 240, 0.78);
 }
 
-.footer nav {
+.partnerGrid {
   display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.partnerCard {
+  display: grid;
+  min-width: 0;
   gap: 9px;
+  border: 1px solid rgba(255, 250, 240, 0.16);
+  border-radius: var(--radius);
+  background: rgba(255, 250, 240, 0.08);
+  padding: 14px;
+  color: rgba(255, 250, 240, 0.76);
+}
+
+.partnerCard:hover {
+  border-color: rgba(213, 167, 47, 0.7);
+  background: rgba(255, 250, 240, 0.12);
+  color: var(--paper);
+}
+
+.partnerCard strong {
+  line-height: 1.25;
+}
+
+.partnerCard span:last-child {
+  color: rgba(255, 250, 240, 0.62);
+  font-size: 0.84rem;
+  font-weight: 800;
+}
+
+.partnerLogo {
+  display: grid;
+  min-height: 116px;
+  place-items: center;
+  border-radius: 6px;
+  background: rgba(255, 250, 240, 0.94);
+  padding: 12px;
+}
+
+.partnerLogo img {
+  max-height: 92px;
+  object-fit: contain;
 }
 
 .footer a {
@@ -46,10 +92,10 @@
 }
 
 .bottom {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: minmax(180px, 1fr) auto minmax(220px, 1fr) minmax(240px, 1.1fr);
   gap: 14px;
+  align-items: center;
   border-top: 1px solid rgba(255, 250, 240, 0.16);
   margin-top: 34px;
   padding-top: 18px;
@@ -57,8 +103,25 @@
   font-size: 0.88rem;
 }
 
+.bottom nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
 @media (max-width: 900px) {
-  .grid {
+  .header,
+  .bottom {
+    grid-template-columns: 1fr;
+  }
+
+  .partnerGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .partnerGrid {
     grid-template-columns: 1fr;
   }
 }

@@ -2,6 +2,8 @@ import {
   BadgeCheck,
   BriefcaseBusiness,
   CalendarDays,
+  Camera,
+  Download,
   Handshake,
   Images,
   Mail,
@@ -59,6 +61,8 @@ export const editionLinks = [
   { href: "/first-edition/vendors", label: "Vendors", icon: Handshake },
   { href: "/first-edition/branding", label: "Branding", icon: Megaphone },
   { href: "/first-edition/posters", label: "Posters", icon: Images },
+  { href: "/first-edition/downloads", label: "Download Centre", icon: Download },
+  { href: "/gallery", label: "Gallery", icon: Camera },
   { href: "/fixtures", label: "Fixtures", icon: CalendarDays },
   { href: "/results", label: "Results", icon: Trophy },
   { href: "/tables", label: "Tables", icon: BadgeCheck },
@@ -69,7 +73,24 @@ export const impactStats = [
   { value: "10", label: "Age groups" },
   { value: "10+", label: "East African flags represented" },
   { value: "2027", label: "First edition" },
-  { value: "20", label: "Max squad size" }
+  { value: "250+", label: "Teams" }
+];
+
+export const tournamentKickoff = "2027-04-12T09:00:00+03:00";
+
+export const aboutPillars = [
+  {
+    title: "Youth Development",
+    copy: "Nurturing young footballers through quality competition, football education, discipline, teamwork, and character development."
+  },
+  {
+    title: "Regional Unity",
+    copy: "Bringing academies and communities together from across East Africa to promote friendship, cultural exchange, and sportsmanship."
+  },
+  {
+    title: "Talent Exposure",
+    copy: "Creating a stage where players can showcase their abilities to scouts, coaches, professional clubs, and educational institutions."
+  }
 ];
 
 export const countries = [
@@ -168,21 +189,59 @@ export const standings = [
   }
 ];
 
-export const records = [
+export const recordCategories = [
+  "Main Cup Winners",
+  "Plate Cup Winners",
+  "Platinum Cup Winners",
+  "Top Scorers",
+  "Best Goalkeepers",
+  "Player of the Tournament"
+];
+
+export const records = ageGroups.flatMap((ageGroup) =>
+  recordCategories.map((category) => ({
+    edition: "1st Edition",
+    ageGroup: ageGroup.label,
+    category,
+    title: `${ageGroup.label} ${category}`,
+    status: "To be confirmed after the 1st Edition."
+  }))
+);
+
+export const downloadDocuments = [
+  "Tournament Rules",
+  "Team Registration List",
+  "Participation Consent Form",
+  "Safeguarding Policy",
+  "Medical Policy",
+  "Invitation Letter",
+  "Participation Certificates"
+];
+
+export const galleryCategories = [
   {
-    ageGroup: "U13",
-    title: "U13 Player of the Tournament",
-    status: "Winner to be announced after the 1st Edition."
+    title: "Tournament Photos",
+    status: "Photo collections will be published during and after the tournament."
   },
   {
-    ageGroup: "U15",
-    title: "U15 Player of the Tournament",
-    status: "Winner to be announced after the 1st Edition."
+    title: "Match Highlights",
+    status: "Video highlights will appear once official match media is available."
   },
   {
-    ageGroup: "U17",
-    title: "U17 Player of the Tournament",
-    status: "Winner to be announced after the 1st Edition."
+    title: "Award Ceremonies",
+    status: "Award moments will be archived after presentation ceremonies."
+  },
+  {
+    title: "Opening Ceremony",
+    status: "Opening ceremony media will be added from the 1st Edition."
+  },
+  {
+    title: "Closing Ceremony",
+    status: "Closing ceremony media will be added after the final day."
+  },
+  {
+    title: "Videos",
+    status: "Featured tournament videos will be curated here."
   }
 ];
 

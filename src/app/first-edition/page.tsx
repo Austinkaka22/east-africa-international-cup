@@ -12,7 +12,7 @@ export default function FirstEditionPage() {
       <PageHero
         eyebrow="1st Edition"
         title="The first chapter of a regional tournament."
-        copy="A central hub for registration, guidelines, approved teams, applications, branding, posters, fixtures, results, tables, and awards."
+        copy="A central hub for registration, guidelines, approved teams, applications, branding, downloads, gallery, fixtures, results, tables, and awards."
       />
       <section className="section">
         <div className="container grid three">

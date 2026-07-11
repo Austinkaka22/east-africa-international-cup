@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { PageHero } from "@/components/page-hero";
+import { aboutPillars } from "@/data/tournament";
 
 export const metadata = {
   title: "About Us"
@@ -39,13 +40,10 @@ export default function AboutPage() {
       </section>
       <section className="section-tight band">
         <div className="container grid three">
-          {["Youth Development", "Regional Unity", "Talent Exposure"].map((item) => (
-            <div className="card pad" key={item}>
-              <h3>{item}</h3>
-              <p>
-                Building a tournament experience that connects players, families, coaches,
-                academies, scouts, and partners across East Africa.
-              </p>
+          {aboutPillars.map((pillar) => (
+            <div className="card pad" key={pillar.title}>
+              <h3>{pillar.title}</h3>
+              <p>{pillar.copy}</p>
             </div>
           ))}
         </div>

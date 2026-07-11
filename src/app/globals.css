@@ -293,6 +293,16 @@ p {
   margin-top: 18px;
 }
 
+.check-list {
+  display: grid;
+  gap: 8px;
+  margin: 16px 0 0;
+  padding-left: 18px;
+  color: var(--muted);
+  line-height: 1.5;
+  font-weight: 700;
+}
+
 table {
   width: 100%;
   border-collapse: collapse;

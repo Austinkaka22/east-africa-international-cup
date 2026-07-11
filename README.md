@@ -19,6 +19,10 @@ pnpm dev
 
 Update `.env.local` with SMTP credentials before relying on production email delivery. When SMTP is not configured, form submissions return success in preview mode and are logged server-side, so the website remains demoable without a mail account.
 
+## Deferred Portal Work
+
+Academy or club logo uploads are intentionally deferred until the database and file storage layer are in place. The current registration flow is an email-only JSON submission, so an active upload field would need persistent storage, file validation, and an admin review path before it can be released reliably.
+
 ## Troubleshooting
 
 If local styling disappears after running `pnpm build` while `pnpm dev` is still active, stop the dev server, remove `.next`, and restart `pnpm dev`. The dev server can otherwise keep serving HTML that points at stale CSS asset paths.

@@ -1,7 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, CalendarDays, MapPinned } from "lucide-react";
-import { brand, impactStats } from "@/data/tournament";
+import { Countdown } from "@/components/countdown";
+import { brand, impactStats, tournamentKickoff } from "@/data/tournament";
 import styles from "./hero.module.css";
 
 export function Hero() {
@@ -30,6 +31,7 @@ export function Hero() {
             <MapPinned size={18} /> {brand.venue}
           </span>
         </div>
+        <Countdown target={tournamentKickoff} />
       </div>
       <div className={styles.visual}>
         <Image

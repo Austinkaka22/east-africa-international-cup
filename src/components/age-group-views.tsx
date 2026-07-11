@@ -44,7 +44,9 @@ type Standing = {
 };
 
 type RecordEntry = {
+  edition: string;
   ageGroup: string;
+  category: string;
   title: string;
   status: string;
 };
@@ -295,7 +297,11 @@ export function RecordsView({
         <div className="grid three" style={{ marginTop: 26 }}>
           {filtered.map((record) => (
             <div className="card pad" key={record.title}>
-              <h3>{record.title}</h3>
+              <p className="eyebrow">{record.edition}</p>
+              <h3>{record.category}</h3>
+              <p>
+                <strong>{record.ageGroup}</strong>
+              </p>
               <p>{record.status}</p>
             </div>
           ))}

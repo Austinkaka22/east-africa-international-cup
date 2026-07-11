@@ -176,7 +176,7 @@ export function TeamRegistrationForm({
 
         {status ? <div className={`status ${status.type}`}>{status.message}</div> : null}
         <button className="button gold" type="submit" disabled={pending}>
-          {pending ? "Submitting..." : "Submit academy registration"}
+          {pending ? "Submitting..." : "Submit Registration"}
         </button>
       </form>
     </div>
