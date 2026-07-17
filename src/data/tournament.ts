@@ -31,15 +31,15 @@ export const brand = {
 
 export const ageGroups = [
   { key: "U7", label: "U7", squadLimit: 10 },
-  { key: "U9", label: "U9", squadLimit: 12 },
-  { key: "U11", label: "U11", squadLimit: 14 },
-  { key: "U13", label: "U13", squadLimit: 16 },
-  { key: "U15", label: "U15", squadLimit: 20 },
-  { key: "U17", label: "U17", squadLimit: 20 },
-  { key: "GIRLS_U13", label: "Girls U13", squadLimit: 16 },
-  { key: "GIRLS_U15", label: "Girls U15", squadLimit: 20 },
-  { key: "GIRLS_U17", label: "Girls U17", squadLimit: 20 },
-  { key: "SENIORS", label: "Seniors", squadLimit: 20 }
+  { key: "U9", label: "U9", squadLimit: 10 },
+  { key: "U11", label: "U11", squadLimit: 12 },
+  { key: "U13", label: "U13", squadLimit: 14 },
+  { key: "U15", label: "U15", squadLimit: 18 },
+  { key: "U17", label: "U17", squadLimit: 18 },
+  { key: "GIRLS_U13", label: "Girls U13", squadLimit: 14 },
+  { key: "GIRLS_U15", label: "Girls U15", squadLimit: 18 },
+  { key: "GIRLS_U17", label: "Girls U17", squadLimit: 18 },
+  { key: "SENIORS", label: "Seniors", squadLimit: 18 }
 ];
 
 export const teamCountOptions = ["None", "1 team", "2 teams", "3 teams", "4 teams"];
@@ -209,13 +209,40 @@ export const records = ageGroups.flatMap((ageGroup) =>
 );
 
 export const downloadDocuments = [
-  "Tournament Rules",
-  "Team Registration List",
-  "Participation Consent Form",
-  "Safeguarding Policy",
-  "Medical Policy",
-  "Invitation Letter",
-  "Participation Certificates"
+  {
+    title: "Rules & Regulations",
+    href: "/downloads/EA CUP RULES & REGULATIONS.pdf",
+    status: "Available"
+  },
+  {
+    title: "Registration Form",
+    href: "/downloads/EA CUP REGISTRATION FORM.pdf",
+    status: "Available"
+  },
+  {
+    title: "Participation Consent Form",
+    href: "/downloads/EA CUP PARTICIPATON CONSENT FORM.pdf",
+    status: "Available"
+  },
+  {
+    title: "Safeguarding & Child Policy",
+    href: "/downloads/EA CUP SAFEGUARDING & CHILD POLICY.pdf",
+    status: "Available"
+  },
+  {
+    title: "Medical Policy",
+    href: "/downloads/EA CUP MEDICAL POLICY.pdf",
+    status: "Available"
+  },
+  {
+    title: "Invitation Letter",
+    href: "/downloads/EA CUP INVITATION LETTER.pdf",
+    status: "Available"
+  },
+  {
+    title: "Participation Certificates",
+    status: "Will be published after the tournament."
+  }
 ];
 
 export const galleryCategories = [

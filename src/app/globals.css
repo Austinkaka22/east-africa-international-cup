@@ -303,6 +303,16 @@ p {
   font-weight: 700;
 }
 
+.check-list a {
+  color: var(--green);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.check-list a:hover {
+  color: var(--deep-green);
+}
+
 table {
   width: 100%;
   border-collapse: collapse;
